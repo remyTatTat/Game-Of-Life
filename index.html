@@ -1,0 +1,33 @@
+<div class=""><!DOCTYPE html></div>
+<html lang="en" class="">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+</head>
+<body>
+    <h1>Conway's Game of Life</h1>
+    <div class="button">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+
+    <div class="grid" id="mothership">
+    </div>
+</body>
+
+<script src="game.js"></script>
+<script>
+    var interval;
+    board = emptyBoard(50, 100);
+    createCells(board);
+
+    var startButton = document.getElementById('start')
+    var stopButton = document.getElementById('stop');
+
+    startButton.addEventListener('click', startGame);
+    stopButton.addEventListener('click', stopGame);
+</script>
+</html>
